@@ -40,8 +40,9 @@ namespace ITsistemi
             this.godina_label = new System.Windows.Forms.Label();
             this.textIme = new System.Windows.Forms.TextBox();
             this.textPrezime = new System.Windows.Forms.TextBox();
-            this.textStatus = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textGod = new System.Windows.Forms.TextBox();
+            this.textStatus = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +85,7 @@ namespace ITsistemi
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.Btn_unos, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.ime_label, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.prezime_label, 0, 1);
@@ -91,7 +93,6 @@ namespace ITsistemi
             this.tableLayoutPanel1.Controls.Add(this.godina_label, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.textIme, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textPrezime, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textStatus, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.textGod, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(37, 213);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -165,12 +166,16 @@ namespace ITsistemi
             this.textPrezime.Size = new System.Drawing.Size(100, 22);
             this.textPrezime.TabIndex = 5;
             // 
-            // textStatus
+            // comboBox1
             // 
-            this.textStatus.Location = new System.Drawing.Point(147, 95);
-            this.textStatus.Name = "textStatus";
-            this.textStatus.Size = new System.Drawing.Size(100, 22);
-            this.textStatus.TabIndex = 6;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "redovni",
+            "izvanredni"});
+            this.comboBox1.Location = new System.Drawing.Point(147, 95);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 4;
             // 
             // textGod
             // 
@@ -178,6 +183,13 @@ namespace ITsistemi
             this.textGod.Name = "textGod";
             this.textGod.Size = new System.Drawing.Size(100, 22);
             this.textGod.TabIndex = 7;
+            // 
+            // textStatus
+            // 
+            this.textStatus.Location = new System.Drawing.Point(147, 95);
+            this.textStatus.Name = "textStatus";
+            this.textStatus.Size = new System.Drawing.Size(100, 22);
+            this.textStatus.TabIndex = 6;
             // 
             // StudentManagement
             // 
@@ -211,9 +223,9 @@ namespace ITsistemi
         private System.Windows.Forms.Label godina_label;
         private System.Windows.Forms.TextBox textIme;
         private System.Windows.Forms.TextBox textPrezime;
-        private System.Windows.Forms.TextBox textStatus;
         private System.Windows.Forms.TextBox textGod;
         private System.Windows.Forms.Button Btn_unos;
-
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textStatus;
     }
 }

@@ -40,7 +40,7 @@ namespace ITsistemi
 
             addStudent.ime = textIme.Text;
             addStudent.prezime = textPrezime.Text;
-            addStudent.status = textStatus.Text;
+            addStudent.status = comboBox1.SelectedItem.ToString();
             addStudent.godina =int.Parse(textGod.Text);
 
             studentData.AddNewStudent(addStudent);
